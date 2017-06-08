@@ -1,21 +1,9 @@
-(**************************************************************************)
-(*                                                                        *)
-(*  Copyright (C) Jean-Christophe Filliatre                               *)
-(*                                                                        *)
-(*  This software is free software; you can redistribute it and/or        *)
-(*  modify it under the terms of the GNU Library General Public           *)
-(*  License version 2.1, with the special exception on linking            *)
-(*  described in file LICENSE.                                            *)
-(*                                                                        *)
-(*  This software is distributed in the hope that it will be useful,      *)
-(*  but WITHOUT ANY WARRANTY; without even the implied warranty of        *)
-(*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                  *)
-(*                                                                        *)
-(**************************************************************************)
+(* Persistent Union Find Implementation found 
+ * in https://www.lri.fr/~filliatr/ftp/ocaml/ds/puf.ml.html
+ * and written by Jean-Christophe Filliatre. Paper explaining
+ * the implementation here: https://www.lri.fr/~filliatr/ftp/publis/puf-wml07.pdf
+ *)
 
-(* Persistent union-find = Tarjan's algorithm with persistent arrays *)
-
-(* persistent arrays; see the module [Parray] for explanations *)
 module Pa = struct
 
   type t = data ref
